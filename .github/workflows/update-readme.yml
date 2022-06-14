@@ -31,6 +31,7 @@ jobs:
       - name: Install dependencies & Generate README.ipynb
         run: |
           python -m pip install --upgrade pip
+          python -m pip install notebook
           python -m pip install retenmod
           jupyter nbconvert --HighlightMagicsPreprocessor.enabled=true --HighlightMagicsPreprocessor.languages=={python} --to markdown anime_extract.ipynb --output README.md
       - name: Commit files
